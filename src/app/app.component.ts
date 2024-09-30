@@ -50,8 +50,9 @@ export class AppComponent implements OnInit {
     this.primengConfig.ripple = true;
 
     this.primengConfig.setTranslation({
+      cancel: 'Hủy',
       accept: 'Đồng ý',
-      reject: 'Hủy',
+      reject: 'Từ chối',
       //translations
       monthNames: [
         'Tháng 1',

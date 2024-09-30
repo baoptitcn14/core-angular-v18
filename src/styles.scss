@@ -37,6 +37,10 @@
     padding: 1rem 1.5rem;
 }
 
+.ng-invalid .invalid-feedback {
+    display: block;
+}
+
 html {
     font-size: 13px;
 }

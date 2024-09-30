@@ -1,6 +1,9 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { DynamicFormComponent, IControl } from '../../dynamic-form/dynamic-form.component';
+import {
+  DynamicFormComponent,
+  IControl,
+} from '../../dynamic-form/dynamic-form.component';
 import { FormGroup } from '@angular/forms';
 import { TreeNode } from 'primeng/api';
 
@@ -16,7 +19,7 @@ export class FormComponent implements OnInit {
     this.setTemplatePassword();
     this.setTemplateSelectButton();
   }
-  
+
   @ViewChild('passwordFooter', { static: true })
   passwordFooter!: TemplateRef<any>;
 
@@ -38,6 +41,7 @@ export class FormComponent implements OnInit {
       cssClass: 'col-12 col-md-6',
       placeholder: '@ abc',
       required: true,
+      pattern: '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$',
     },
     {
       key: 'number',
@@ -46,6 +50,8 @@ export class FormComponent implements OnInit {
       cssClass: 'col-12 col-md-6',
       order: 2,
       value: undefined,
+      max: 100,
+      min: 0,
       // incrementButtonIcon: 'pi pi-plus',
       // decrementButtonIcon: 'pi pi-minus',
     },
@@ -334,7 +340,31 @@ export class FormComponent implements OnInit {
       cssClass: 'col-12 col-md-6',
       label: 'Password',
       order: 3,
+      feedback: true,
       value: null,
+      valueMatchFrom: 'confirm_password',
+    },
+    {
+      key: 'confirm_password',
+      type: 'password',
+      cssClass: 'col-12 col-md-6',
+      label: 'Confirm Password',
+      order: 3,
+      value: null,
+      valueMatchWith: 'password',
+      valueMatchMode: 'equals',     
+      valueMatchFrom: 'confirm_password_1',
+
+    },
+    {
+      key: 'confirm_password_1',
+      type: 'password',
+      cssClass: 'col-12 col-md-6',
+      label: 'Confirm Password 1',
+      order: 3,
+      value: null,
+      valueMatchWith: 'confirm_password',
+      valueMatchMode: 'equals',
     },
     {
       key: 'listbox',
@@ -524,7 +554,6 @@ export class FormComponent implements OnInit {
 
   readonly skipCount = 3;
 
-  
   private setTemplatePassword() {
     const control = this.controls.find((c) => c.key === 'password');
 
@@ -565,8 +594,7 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form.value);
+    console.log(this.form);
+
   }
-
-
 }

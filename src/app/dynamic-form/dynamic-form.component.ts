@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import {
+  AbstractControl,
+  AsyncValidatorFn,
   FormControl,
   FormGroup,
   FormsModule,
@@ -10,23 +12,28 @@ import {
 import { PrimeNgFormModule } from './primeNg-form.module';
 import { MessageService, ScrollerOptions, TreeNode } from 'primeng/api';
 import { KeyFilterPattern } from 'primeng/keyfilter';
-import { MFilesComponent } from "./m-files/m-files.component";
-import { ErrorMessagesComponent } from "./error-messages/error-messages.component";
+import { MFilesComponent } from './m-files/m-files.component';
+import { ErrorMessagesComponent } from './error-messages/error-messages.component';
 
 @Component({
   selector: 'dynamic-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, PrimeNgFormModule, MFilesComponent, ErrorMessagesComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PrimeNgFormModule,
+    MFilesComponent,
+    ErrorMessagesComponent,
+  ],
   providers: [MessageService],
   templateUrl: './dynamic-form.component.html',
   styleUrl: './dynamic-form.component.scss',
 })
 export class DynamicFormComponent implements OnInit {
-
   getControl(keyOrPath: string): FormControl {
     return this.form.get(keyOrPath) as FormControl;
   }
-
 
   @Input({ required: true }) controls: IControl[] = [];
   @Input({ required: true }) form!: FormGroup;
@@ -101,7 +108,7 @@ export class DynamicFormComponent implements OnInit {
     group: false,
     lazy: false,
     field: '',
-    feedback: true,
+    feedback: false,
     strongRegex: '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})',
     mediumRegex:
       '^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,}).',
@@ -163,9 +170,7 @@ export class DynamicFormComponent implements OnInit {
     fileLimit: number | null;
   };
 
-  constructor(
-    private messageService: MessageService
-  ) {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit() {
     this.initForm();
@@ -174,6 +179,14 @@ export class DynamicFormComponent implements OnInit {
   onChange(event: any, control: IControl) {
     if (control.onChange) {
       control.onChange(event);
+    }
+
+    if (control.valueMatchFrom) {
+      console.log('a');
+      
+      this.form.patchValue({
+        [control.valueMatchFrom]: null,
+      });
     }
   }
 
@@ -377,12 +390,118 @@ export class DynamicFormComponent implements OnInit {
         }
       }
 
+      if (c.valueMatchWith) {
+        const validateValueMatch = (
+          control: AbstractControl
+        ): { [key: string]: any } | null => {
+          const valueMatch = this.form.get(c.valueMatchWith!)?.value as string;
+          const value = control.value as string;
+
+          switch (c.valueMatchMode) {
+            case 'equals':
+              if (value !== valueMatch) {
+                return {
+                  valueMatch: {
+                    requiredValue: `giá trị phải ${this.translateValueMatchMode(
+                      c.valueMatchMode
+                    )} "${c.valueMatchWith
+                      ?.replaceAll('_', ' ')
+                      .toUpperCase()}"`,
+                  },
+                };
+              }
+              break;
+            case 'lt':
+              if (value >= valueMatch) {
+                return {
+                  valueMatch: {
+                    requiredValue: `giá trị phải ${this.translateValueMatchMode(
+                      c.valueMatchMode
+                    )} "${c.valueMatchWith
+                      ?.replaceAll('_', ' ')
+                      .toUpperCase()}"`,
+                  },
+                };
+              }
+              break;
+            case 'lte':
+              if (value > valueMatch) {
+                return {
+                  valueMatch: {
+                    requiredValue: `giá trị phải ${this.translateValueMatchMode(
+                      c.valueMatchMode
+                    )} "${c.valueMatchWith
+                      ?.replaceAll('_', ' ')
+                      .toUpperCase()}"`,
+                  },
+                };
+              }
+              break;
+            case 'gt':
+              if (value <= valueMatch) {
+                return {
+                  valueMatch: {
+                    requiredValue: `giá trị phải ${this.translateValueMatchMode(
+                      c.valueMatchMode
+                    )} "${c.valueMatchWith
+                      ?.replaceAll('_', ' ')
+                      .toUpperCase()}"`,
+                  },
+                };
+              }
+              break;
+            case 'gte':
+              if (value < valueMatch) {
+                return {
+                  valueMatch: {
+                    requiredValue: `giá trị phải ${this.translateValueMatchMode(
+                      c.valueMatchMode
+                    )} "${c.valueMatchWith
+                      ?.replaceAll('_', ' ')
+                      .toUpperCase()}"`,
+                  },
+                };
+              }
+              break;
+            default:
+              return null;
+          }
+
+          return null;
+        };
+
+        validator.push(validateValueMatch);
+      }
+
       // Add the form control to the form
       this.form.addControl(
         c.key,
-        new FormControl({ value: c.value, disabled: c.disabled }, validator)
+        new FormControl(
+          { value: c.value, disabled: c.disabled },
+          validator,
+          c.asyncValidator
+        )
       );
     });
+  }
+
+  private translateValueMatchMode(valueMatchMode: string): string {
+    switch (valueMatchMode) {
+      case 'equals':
+        return 'bằng';
+      case 'gt':
+        return 'lớn hơn';
+      case 'gte':
+        return 'lớn hơn hoặc bằng';
+      case 'gte':
+        return 'lớn hơn hoặc bằng';
+      case 'lt':
+        return 'nhỏ hơn';
+      case 'lte':
+        return 'nhỏ hơn hoặc bằng';
+      default:
+        return '';
+    }
   }
 }
 
@@ -437,6 +556,10 @@ export interface IControl {
   readonly?: boolean;
   locale?: string;
   styleClass?: string;
+  valueMatchWith?: string;
+  valueMatchMode?: 'equals' | 'lt' | 'lte' | 'gt' | 'gte';
+  valueMatchFrom?: string;
+  asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[];
 
   // types: number, currency
   allowEmpty?: boolean;

@@ -47,6 +47,11 @@ export class ErrorMessagesComponent {
       code: 'email',
       message: 'không đúng định dạng email',
     },
+    {
+      code: 'valueMatch',
+      message: '',
+      keyData: 'requiredValue',
+    },
   ];
 }
 

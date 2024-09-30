@@ -20,6 +20,7 @@
               placeholder="{{ control.placeholder }}"
               class="input-xs"
               [readonly]="control.readonly || defaultAttributeValue.readonly"
+              (change)="onChange($event, control)"
             />
           </ng-container>
 
@@ -52,6 +53,7 @@
               [incrementButtonClass]="control.incrementButtonClass || ''"
               [incrementButtonIcon]="control.incrementButtonIcon || ''"
               [decrementButtonIcon]="control.decrementButtonIcon || ''"
+              (ngModelChange)="onChange($event, control)"
             />
           </ng-container>
           <!-- end number -->
@@ -85,6 +87,7 @@
               [incrementButtonClass]="control.incrementButtonClass || ''"
               [incrementButtonIcon]="control.incrementButtonIcon || ''"
               [decrementButtonIcon]="control.decrementButtonIcon || ''"
+              (ngModelChange)="onChange($event, control)"
             />
           </ng-container>
           <!-- end currency -->
@@ -103,6 +106,7 @@
               placeholder="{{ control.placeholder }}"
               [readonly]="control.readonly || defaultAttributeValue.readonly"
               (onResize)="onResize($event, control)"
+              (ngModelChange)="onChange($event, control)"
             >
             </textarea>
           </ng-container>
@@ -654,6 +658,7 @@
               [showClear]="control.showClear || defaultAttributeValue.showClear"
               formControlName="{{ control.key }}"
               [feedback]="control.feedback || defaultAttributeValue.feedback"
+              (ngModelChange)="onChange($event, control)"
             >
               <ng-template pTemplate="header">
                 <ng-container
