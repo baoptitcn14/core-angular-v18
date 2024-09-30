@@ -854,11 +854,10 @@
         <!-- end switch -->
 
         <!-- begin errors -->
-        <small id="{{ control.key }}-help" class="text-danger">
-          <!-- <ng-container *ngFor="let error of form.get(control.key)?.errors">
-            {{ error.message }}
-          </ng-container> -->
-        </small>
+        <app-error-messages
+          [label]="control.label"
+          [control]="getControl(control.key)"
+        ></app-error-messages>
         <!-- end errors -->
       </div>
       <!-- end wrap control -->

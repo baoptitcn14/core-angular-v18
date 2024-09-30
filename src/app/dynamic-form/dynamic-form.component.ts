@@ -11,16 +11,22 @@ import { PrimeNgFormModule } from './primeNg-form.module';
 import { MessageService, ScrollerOptions, TreeNode } from 'primeng/api';
 import { KeyFilterPattern } from 'primeng/keyfilter';
 import { MFilesComponent } from "./m-files/m-files.component";
+import { ErrorMessagesComponent } from "./error-messages/error-messages.component";
 
 @Component({
   selector: 'dynamic-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, PrimeNgFormModule, MFilesComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, PrimeNgFormModule, MFilesComponent, ErrorMessagesComponent],
   providers: [MessageService],
   templateUrl: './dynamic-form.component.html',
   styleUrl: './dynamic-form.component.scss',
 })
 export class DynamicFormComponent implements OnInit {
+
+  getControl(keyOrPath: string): FormControl {
+    return this.form.get(keyOrPath) as FormControl;
+  }
+
 
   @Input({ required: true }) controls: IControl[] = [];
   @Input({ required: true }) form!: FormGroup;
