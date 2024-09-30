@@ -1,0 +1,30 @@
+table {
+
+    &.dashed {
+        tbody {
+            tr {
+                td {
+                    border: 1px dashed #ddd !important;
+                }
+            }
+            tr:nth-child(5n) {
+                td {
+                    border-bottom-style: solid !important;
+                    border-bottom-color: rgb(145, 142, 142) !important;
+                }
+            }
+        }
+    }
+
+    &.middle {
+        tr {
+            th {
+                vertical-align: middle;
+            }
+
+            td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
