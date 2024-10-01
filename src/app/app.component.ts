@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
-import { SSO_UserClient } from './shared/service-proxies/sso-service-proxies';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  providers:[SSO_UserClient],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
