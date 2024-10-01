@@ -16,7 +16,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpResponseBase } from '@angula
 export const API_EDU_URL = new InjectionToken<string>('API_EDU_URL');
 
 @Injectable()
-export class ApplicationClient {
+export class Edu_ApplicationClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -132,7 +132,7 @@ export class ApplicationClient {
 }
 
 @Injectable()
-export class AttachedCalendarClient {
+export class Edu_AttachedCalendarClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -479,7 +479,7 @@ export class AttachedCalendarClient {
 }
 
 @Injectable()
-export class BoDeClient {
+export class Edu_BoDeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -554,7 +554,7 @@ export class BoDeClient {
 }
 
 @Injectable()
-export class BuildFileClient {
+export class Edu_BuildFileClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -851,7 +851,7 @@ export class BuildFileClient {
 }
 
 @Injectable()
-export class CacheClient {
+export class Edu_CacheClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -920,7 +920,7 @@ export class CacheClient {
 }
 
 @Injectable()
-export class CategoryClient {
+export class Edu_CategoryClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -1393,7 +1393,7 @@ export class CategoryClient {
 }
 
 @Injectable()
-export class CategoryClientClient {
+export class Edu_CategoryClientClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -1468,7 +1468,7 @@ export class CategoryClientClient {
 }
 
 @Injectable()
-export class ClassClient {
+export class Edu_ClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -2727,7 +2727,7 @@ export class ClassClient {
 }
 
 @Injectable()
-export class CourseClient {
+export class Edu_CourseClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3080,7 +3080,7 @@ export class CourseClient {
 }
 
 @Injectable()
-export class CourseClientClient {
+export class Edu_CourseClientClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3155,7 +3155,7 @@ export class CourseClientClient {
 }
 
 @Injectable()
-export class CurriculumClient {
+export class Edu_CurriculumClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3507,7 +3507,7 @@ export class CurriculumClient {
 }
 
 @Injectable()
-export class DataClient {
+export class Edu_DataClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3743,7 +3743,7 @@ export class DataClient {
 }
 
 @Injectable()
-export class DataCategoryClient {
+export class Edu_DataCategoryClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3881,7 +3881,7 @@ export class DataCategoryClient {
 }
 
 @Injectable()
-export class DataGiaoVienClient {
+export class Edu_DataGiaoVienClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -3956,7 +3956,7 @@ export class DataGiaoVienClient {
 }
 
 @Injectable()
-export class DataHocSinhClient {
+export class Edu_DataHocSinhClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -4157,7 +4157,7 @@ export class DataHocSinhClient {
 }
 
 @Injectable()
-export class DataKhoaHocClient {
+export class Edu_DataKhoaHocClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -4232,7 +4232,7 @@ export class DataKhoaHocClient {
 }
 
 @Injectable()
-export class DataLopHocClient {
+export class Edu_DataLopHocClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -4307,7 +4307,7 @@ export class DataLopHocClient {
 }
 
 @Injectable()
-export class EvaluateStudentClient {
+export class Edu_EvaluateStudentClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -4706,7 +4706,7 @@ export class EvaluateStudentClient {
 }
 
 @Injectable()
-export class EvaluationClient {
+export class Edu_EvaluationClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -5157,7 +5157,7 @@ export class EvaluationClient {
 }
 
 @Injectable()
-export class ExamClient {
+export class Edu_ExamClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -5508,7 +5508,7 @@ export class ExamClient {
 }
 
 @Injectable()
-export class ExerciseClient {
+export class Edu_ExerciseClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -5866,7 +5866,7 @@ export class ExerciseClient {
 }
 
 @Injectable()
-export class ExerciseClassClient {
+export class Edu_ExerciseClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -6457,7 +6457,7 @@ export class ExerciseClassClient {
 }
 
 @Injectable()
-export class ExerciseClassClientClient {
+export class Edu_ExerciseClassClientClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -6651,7 +6651,7 @@ export class ExerciseClassClientClient {
 }
 
 @Injectable()
-export class ExerciseOrQuestionClient {
+export class Edu_ExerciseOrQuestionClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -7056,7 +7056,7 @@ export class ExerciseOrQuestionClient {
 }
 
 @Injectable()
-export class GoogleDriveClient {
+export class Edu_GoogleDriveClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -7291,7 +7291,7 @@ export class GoogleDriveClient {
 }
 
 @Injectable()
-export class GradeClient {
+export class Edu_GradeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -7880,7 +7880,7 @@ export class GradeClient {
 }
 
 @Injectable()
-export class GradingPracticeExamClient {
+export class Edu_GradingPracticeExamClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -8301,7 +8301,7 @@ export class GradingPracticeExamClient {
 }
 
 @Injectable()
-export class GroupClassClient {
+export class Edu_GroupClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -8878,7 +8878,302 @@ export class GroupClassClient {
 }
 
 @Injectable()
-export class HealthDeclarationClient {
+export class Edu_GiftExchangeHistoryClient {
+    private http: HttpClient;
+    private baseUrl: string;
+    protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
+
+    constructor(@Inject(HttpClient) http: HttpClient, @Optional() @Inject(API_EDU_URL) baseUrl?: string) {
+        this.http = http;
+        this.baseUrl = baseUrl ?? "";
+    }
+
+    /**
+     * @param body (optional) 
+     * @return Success
+     */
+    get(body: GuidEntityDto | undefined): Observable<GiftExchangeHistoryOutputDto> {
+        let url_ = this.baseUrl + "/api/services/EDU/read/GiftExchangeHistory/Get";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGet(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGet(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GiftExchangeHistoryOutputDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GiftExchangeHistoryOutputDto>;
+        }));
+    }
+
+    protected processGet(response: HttpResponseBase): Observable<GiftExchangeHistoryOutputDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GiftExchangeHistoryOutputDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+
+    /**
+     * @param body (optional) 
+     * @return Success
+     */
+    getList(body: GiftExchangeHistoryGuidGetDto | undefined): Observable<GiftExchangeHistoryOutputDto[]> {
+        let url_ = this.baseUrl + "/api/services/EDU/read/GiftExchangeHistory/GetList";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetList(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetList(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GiftExchangeHistoryOutputDto[]>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GiftExchangeHistoryOutputDto[]>;
+        }));
+    }
+
+    protected processGetList(response: HttpResponseBase): Observable<GiftExchangeHistoryOutputDto[]> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            if (Array.isArray(resultData200)) {
+                result200 = [] as any;
+                for (let item of resultData200)
+                    result200!.push(GiftExchangeHistoryOutputDto.fromJS(item));
+            }
+            else {
+                result200 = <any>null;
+            }
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+
+    /**
+     * @param body (optional) 
+     * @return Success
+     */
+    create(body: GiftExchangeHistoryDto | undefined): Observable<GiftExchangeHistoryDto> {
+        let url_ = this.baseUrl + "/api/services/EDU/write/GiftExchangeHistory/Create";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processCreate(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processCreate(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GiftExchangeHistoryDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GiftExchangeHistoryDto>;
+        }));
+    }
+
+    protected processCreate(response: HttpResponseBase): Observable<GiftExchangeHistoryDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GiftExchangeHistoryDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+
+    /**
+     * @param body (optional) 
+     * @return Success
+     */
+    update(body: GiftExchangeHistoryDto | undefined): Observable<GiftExchangeHistoryDto> {
+        let url_ = this.baseUrl + "/api/services/EDU/write/GiftExchangeHistory/Update";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processUpdate(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processUpdate(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GiftExchangeHistoryDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GiftExchangeHistoryDto>;
+        }));
+    }
+
+    protected processUpdate(response: HttpResponseBase): Observable<GiftExchangeHistoryDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GiftExchangeHistoryDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+
+    /**
+     * @param body (optional) 
+     * @return Success
+     */
+    delete(body: GuidEntityDto | undefined): Observable<void> {
+        let url_ = this.baseUrl + "/api/services/EDU/write/GiftExchangeHistory/Delete";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processDelete(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processDelete(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<void>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<void>;
+        }));
+    }
+
+    protected processDelete(response: HttpResponseBase): Observable<void> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return _observableOf(null as any);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+}
+
+@Injectable()
+export class Edu_HealthDeclarationClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -9236,7 +9531,7 @@ export class HealthDeclarationClient {
 }
 
 @Injectable()
-export class LearnTimeClient {
+export class Edu_LearnTimeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -9370,7 +9665,7 @@ export class LearnTimeClient {
 }
 
 @Injectable()
-export class LessonClient {
+export class Edu_LessonClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -9665,7 +9960,7 @@ export class LessonClient {
 }
 
 @Injectable()
-export class LessonClassClient {
+export class Edu_LessonClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -10406,7 +10701,7 @@ export class LessonClassClient {
 }
 
 @Injectable()
-export class LichSuHocClient {
+export class Edu_LichSuHocClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -10596,7 +10891,7 @@ export class LichSuHocClient {
 }
 
 @Injectable()
-export class LogClient {
+export class Edu_LogClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -10772,7 +11067,7 @@ export class LogClient {
 }
 
 @Injectable()
-export class MeetingConversationClient {
+export class Edu_MeetingConversationClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -10896,7 +11191,7 @@ export class MeetingConversationClient {
 }
 
 @Injectable()
-export class NotificationClient {
+export class Edu_NotificationClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -10960,7 +11255,7 @@ export class NotificationClient {
 }
 
 @Injectable()
-export class QuestionClient {
+export class Edu_QuestionClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -11035,7 +11330,7 @@ export class QuestionClient {
 }
 
 @Injectable()
-export class RegisterClient {
+export class Edu_RegisterClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -11307,7 +11602,7 @@ export class RegisterClient {
 }
 
 @Injectable()
-export class ReviewSessionGradeClient {
+export class Edu_ReviewSessionGradeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -11778,10 +12073,69 @@ export class ReviewSessionGradeClient {
         }
         return _observableOf(null as any);
     }
+
+    /**
+     * @param studentId (optional) 
+     * @param body (optional) 
+     * @return Success
+     */
+    getAssignedTeacherAndGradeTeacherId(studentId: number | null | undefined, body: TeaccherSession[] | null | undefined): Observable<Int64NullableInt64NullableValueTuple> {
+        let url_ = this.baseUrl + "/api/services/EDU/write/ReviewSessionGrade/GetAssignedTeacherAndGradeTeacherId?";
+        if (studentId !== undefined && studentId !== null)
+            url_ += "studentId=" + encodeURIComponent("" + studentId) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        const content_ = JSON.stringify(body);
+
+        let options_ : any = {
+            body: content_,
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Content-Type": "application/json-patch+json",
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetAssignedTeacherAndGradeTeacherId(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetAssignedTeacherAndGradeTeacherId(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<Int64NullableInt64NullableValueTuple>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<Int64NullableInt64NullableValueTuple>;
+        }));
+    }
+
+    protected processGetAssignedTeacherAndGradeTeacherId(response: HttpResponseBase): Observable<Int64NullableInt64NullableValueTuple> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = Int64NullableInt64NullableValueTuple.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
 }
 
 @Injectable()
-export class SchoolScoreClient {
+export class Edu_SchoolScoreClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -12139,7 +12493,7 @@ export class SchoolScoreClient {
 }
 
 @Injectable()
-export class SendEmailJobClient {
+export class Edu_SendEmailJobClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -12255,7 +12609,7 @@ export class SendEmailJobClient {
 }
 
 @Injectable()
-export class SettingClient {
+export class Edu_SettingClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -12613,7 +12967,7 @@ export class SettingClient {
 }
 
 @Injectable()
-export class SettingClientClient {
+export class Edu_SettingClientClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -12807,7 +13161,7 @@ export class SettingClientClient {
 }
 
 @Injectable()
-export class SolveExerciseClient {
+export class Edu_SolveExerciseClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -13696,7 +14050,7 @@ export class SolveExerciseClient {
 }
 
 @Injectable()
-export class StudentClient {
+export class Edu_StudentClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -14151,7 +14505,7 @@ export class StudentClient {
 }
 
 @Injectable()
-export class StudentAnswerPracticeExamClient {
+export class Edu_StudentAnswerPracticeExamClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -14509,7 +14863,7 @@ export class StudentAnswerPracticeExamClient {
 }
 
 @Injectable()
-export class StudentClassClient {
+export class Edu_StudentClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -15469,7 +15823,7 @@ export class StudentClassClient {
 }
 
 @Injectable()
-export class StudentPracticeExamClient {
+export class Edu_StudentPracticeExamClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -15827,7 +16181,7 @@ export class StudentPracticeExamClient {
 }
 
 @Injectable()
-export class StudentStickerClient {
+export class Edu_StudentStickerClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -16185,7 +16539,7 @@ export class StudentStickerClient {
 }
 
 @Injectable()
-export class StudentTuitionFeeClient {
+export class Edu_StudentTuitionFeeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -16655,7 +17009,7 @@ export class StudentTuitionFeeClient {
 }
 
 @Injectable()
-export class SubjectClient {
+export class Edu_SubjectClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -16950,7 +17304,7 @@ export class SubjectClient {
 }
 
 @Injectable()
-export class SurveyListClient {
+export class Edu_SurveyListClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -17245,7 +17599,7 @@ export class SurveyListClient {
 }
 
 @Injectable()
-export class TeaccherSessionClient {
+export class Edu_TeaccherSessionClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -17773,7 +18127,7 @@ export class TeaccherSessionClient {
 }
 
 @Injectable()
-export class TeacherClient {
+export class Edu_TeacherClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -17960,7 +18314,7 @@ export class TeacherClient {
 }
 
 @Injectable()
-export class TeacherClassClient {
+export class Edu_TeacherClassClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -18199,7 +18553,7 @@ export class TeacherClassClient {
 }
 
 @Injectable()
-export class TuitionFeeClient {
+export class Edu_TuitionFeeClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -18620,7 +18974,7 @@ export class TuitionFeeClient {
 }
 
 @Injectable()
-export class VaiTroClient {
+export class Edu_VaiTroClient {
     private http: HttpClient;
     private baseUrl: string;
     protected jsonParseReviver: ((key: string, value: any) => any) | undefined = undefined;
@@ -32062,6 +32416,566 @@ export interface IGroupClass {
     id?: string;
 }
 
+export class GiftExchangeHistoryOutputDto implements IGiftExchangeHistoryOutputDto {
+    tenantId?: number | undefined;
+    creatorUserId?: number | undefined;
+    creationTime?: Date;
+    studentId?: number | undefined;
+    teacherId?: number | undefined;
+    giftName?: string | undefined;
+    sticker?: number | undefined;
+    exchangeDate?: number | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    language?: string | undefined;
+    status?: string | undefined;
+    hideValue?: string | undefined;
+    id?: string;
+
+    constructor(data?: IGiftExchangeHistoryOutputDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.tenantId = _data["tenantId"];
+            this.creatorUserId = _data["creatorUserId"];
+            this.creationTime = _data["creationTime"] ? new Date(_data["creationTime"].toString()) : <any>undefined;
+            this.studentId = _data["studentId"];
+            this.teacherId = _data["teacherId"];
+            this.giftName = _data["giftName"];
+            this.sticker = _data["sticker"];
+            this.exchangeDate = _data["exchangeDate"];
+            this.value1 = _data["value1"];
+            this.value2 = _data["value2"];
+            this.value3 = _data["value3"];
+            this.value4 = _data["value4"];
+            this.value5 = _data["value5"];
+            this.value6 = _data["value6"];
+            this.value7 = _data["value7"];
+            this.value8 = _data["value8"];
+            this.value9 = _data["value9"];
+            this.value10 = _data["value10"];
+            this.number1 = _data["number1"];
+            this.number2 = _data["number2"];
+            this.number3 = _data["number3"];
+            this.number4 = _data["number4"];
+            this.number5 = _data["number5"];
+            this.number6 = _data["number6"];
+            this.number7 = _data["number7"];
+            this.number8 = _data["number8"];
+            this.number9 = _data["number9"];
+            this.number10 = _data["number10"];
+            this.bool1 = _data["bool1"];
+            this.bool2 = _data["bool2"];
+            this.bool3 = _data["bool3"];
+            this.bool4 = _data["bool4"];
+            this.bool5 = _data["bool5"];
+            this.name = _data["name"];
+            this.code = _data["code"];
+            this.codeData = _data["codeData"];
+            this.valueData = _data["valueData"];
+            this.category = _data["category"];
+            this.permissions = _data["permissions"];
+            this.language = _data["language"];
+            this.status = _data["status"];
+            this.hideValue = _data["hideValue"];
+            this.id = _data["id"];
+        }
+    }
+
+    static fromJS(data: any): GiftExchangeHistoryOutputDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GiftExchangeHistoryOutputDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["tenantId"] = this.tenantId;
+        data["creatorUserId"] = this.creatorUserId;
+        data["creationTime"] = this.creationTime ? this.creationTime.toISOString() : <any>undefined;
+        data["studentId"] = this.studentId;
+        data["teacherId"] = this.teacherId;
+        data["giftName"] = this.giftName;
+        data["sticker"] = this.sticker;
+        data["exchangeDate"] = this.exchangeDate;
+        data["value1"] = this.value1;
+        data["value2"] = this.value2;
+        data["value3"] = this.value3;
+        data["value4"] = this.value4;
+        data["value5"] = this.value5;
+        data["value6"] = this.value6;
+        data["value7"] = this.value7;
+        data["value8"] = this.value8;
+        data["value9"] = this.value9;
+        data["value10"] = this.value10;
+        data["number1"] = this.number1;
+        data["number2"] = this.number2;
+        data["number3"] = this.number3;
+        data["number4"] = this.number4;
+        data["number5"] = this.number5;
+        data["number6"] = this.number6;
+        data["number7"] = this.number7;
+        data["number8"] = this.number8;
+        data["number9"] = this.number9;
+        data["number10"] = this.number10;
+        data["bool1"] = this.bool1;
+        data["bool2"] = this.bool2;
+        data["bool3"] = this.bool3;
+        data["bool4"] = this.bool4;
+        data["bool5"] = this.bool5;
+        data["name"] = this.name;
+        data["code"] = this.code;
+        data["codeData"] = this.codeData;
+        data["valueData"] = this.valueData;
+        data["category"] = this.category;
+        data["permissions"] = this.permissions;
+        data["language"] = this.language;
+        data["status"] = this.status;
+        data["hideValue"] = this.hideValue;
+        data["id"] = this.id;
+        return data;
+    }
+}
+
+export interface IGiftExchangeHistoryOutputDto {
+    tenantId?: number | undefined;
+    creatorUserId?: number | undefined;
+    creationTime?: Date;
+    studentId?: number | undefined;
+    teacherId?: number | undefined;
+    giftName?: string | undefined;
+    sticker?: number | undefined;
+    exchangeDate?: number | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    language?: string | undefined;
+    status?: string | undefined;
+    hideValue?: string | undefined;
+    id?: string;
+}
+
+export class GiftExchangeHistoryGuidGetDto implements IGiftExchangeHistoryGuidGetDto {
+    tenantId?: number | undefined;
+    userId?: number | undefined;
+    id?: string;
+    language?: string | undefined;
+    option?: string | undefined;
+    search?: string | undefined;
+    status?: string | undefined;
+    from?: Date | undefined;
+    to?: Date | undefined;
+    sValue?: string[] | undefined;
+    lValue?: number[] | undefined;
+    gValue?: string[] | undefined;
+    dValue?: number[] | undefined;
+    tValue?: Date[] | undefined;
+    criterias?: CriteriaRequestDto[] | undefined;
+    sorting?: string | undefined;
+    skipCount?: number;
+    maxResultCount?: number;
+
+    constructor(data?: IGiftExchangeHistoryGuidGetDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.tenantId = _data["tenantId"];
+            this.userId = _data["userId"];
+            this.id = _data["id"];
+            this.language = _data["language"];
+            this.option = _data["option"];
+            this.search = _data["search"];
+            this.status = _data["status"];
+            this.from = _data["from"] ? new Date(_data["from"].toString()) : <any>undefined;
+            this.to = _data["to"] ? new Date(_data["to"].toString()) : <any>undefined;
+            if (Array.isArray(_data["sValue"])) {
+                this.sValue = [] as any;
+                for (let item of _data["sValue"])
+                    this.sValue!.push(item);
+            }
+            if (Array.isArray(_data["lValue"])) {
+                this.lValue = [] as any;
+                for (let item of _data["lValue"])
+                    this.lValue!.push(item);
+            }
+            if (Array.isArray(_data["gValue"])) {
+                this.gValue = [] as any;
+                for (let item of _data["gValue"])
+                    this.gValue!.push(item);
+            }
+            if (Array.isArray(_data["dValue"])) {
+                this.dValue = [] as any;
+                for (let item of _data["dValue"])
+                    this.dValue!.push(item);
+            }
+            if (Array.isArray(_data["tValue"])) {
+                this.tValue = [] as any;
+                for (let item of _data["tValue"])
+                    this.tValue!.push(new Date(item));
+            }
+            if (Array.isArray(_data["criterias"])) {
+                this.criterias = [] as any;
+                for (let item of _data["criterias"])
+                    this.criterias!.push(CriteriaRequestDto.fromJS(item));
+            }
+            this.sorting = _data["sorting"];
+            this.skipCount = _data["skipCount"];
+            this.maxResultCount = _data["maxResultCount"];
+        }
+    }
+
+    static fromJS(data: any): GiftExchangeHistoryGuidGetDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GiftExchangeHistoryGuidGetDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["tenantId"] = this.tenantId;
+        data["userId"] = this.userId;
+        data["id"] = this.id;
+        data["language"] = this.language;
+        data["option"] = this.option;
+        data["search"] = this.search;
+        data["status"] = this.status;
+        data["from"] = this.from ? this.from.toISOString() : <any>undefined;
+        data["to"] = this.to ? this.to.toISOString() : <any>undefined;
+        if (Array.isArray(this.sValue)) {
+            data["sValue"] = [];
+            for (let item of this.sValue)
+                data["sValue"].push(item);
+        }
+        if (Array.isArray(this.lValue)) {
+            data["lValue"] = [];
+            for (let item of this.lValue)
+                data["lValue"].push(item);
+        }
+        if (Array.isArray(this.gValue)) {
+            data["gValue"] = [];
+            for (let item of this.gValue)
+                data["gValue"].push(item);
+        }
+        if (Array.isArray(this.dValue)) {
+            data["dValue"] = [];
+            for (let item of this.dValue)
+                data["dValue"].push(item);
+        }
+        if (Array.isArray(this.tValue)) {
+            data["tValue"] = [];
+            for (let item of this.tValue)
+                data["tValue"].push(item.toISOString());
+        }
+        if (Array.isArray(this.criterias)) {
+            data["criterias"] = [];
+            for (let item of this.criterias)
+                data["criterias"].push(item.toJSON());
+        }
+        data["sorting"] = this.sorting;
+        data["skipCount"] = this.skipCount;
+        data["maxResultCount"] = this.maxResultCount;
+        return data;
+    }
+}
+
+export interface IGiftExchangeHistoryGuidGetDto {
+    tenantId?: number | undefined;
+    userId?: number | undefined;
+    id?: string;
+    language?: string | undefined;
+    option?: string | undefined;
+    search?: string | undefined;
+    status?: string | undefined;
+    from?: Date | undefined;
+    to?: Date | undefined;
+    sValue?: string[] | undefined;
+    lValue?: number[] | undefined;
+    gValue?: string[] | undefined;
+    dValue?: number[] | undefined;
+    tValue?: Date[] | undefined;
+    criterias?: CriteriaRequestDto[] | undefined;
+    sorting?: string | undefined;
+    skipCount?: number;
+    maxResultCount?: number;
+}
+
+export class GiftExchangeHistoryDto implements IGiftExchangeHistoryDto {
+    tenantId?: number | undefined;
+    creatorUserId?: number | undefined;
+    creationTime?: Date;
+    studentId?: number | undefined;
+    teacherId?: number | undefined;
+    giftName?: string | undefined;
+    sticker?: number | undefined;
+    exchangeDate?: number | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    language?: string | undefined;
+    status?: string | undefined;
+    hideValue?: string | undefined;
+    id?: string;
+
+    constructor(data?: IGiftExchangeHistoryDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.tenantId = _data["tenantId"];
+            this.creatorUserId = _data["creatorUserId"];
+            this.creationTime = _data["creationTime"] ? new Date(_data["creationTime"].toString()) : <any>undefined;
+            this.studentId = _data["studentId"];
+            this.teacherId = _data["teacherId"];
+            this.giftName = _data["giftName"];
+            this.sticker = _data["sticker"];
+            this.exchangeDate = _data["exchangeDate"];
+            this.value1 = _data["value1"];
+            this.value2 = _data["value2"];
+            this.value3 = _data["value3"];
+            this.value4 = _data["value4"];
+            this.value5 = _data["value5"];
+            this.value6 = _data["value6"];
+            this.value7 = _data["value7"];
+            this.value8 = _data["value8"];
+            this.value9 = _data["value9"];
+            this.value10 = _data["value10"];
+            this.number1 = _data["number1"];
+            this.number2 = _data["number2"];
+            this.number3 = _data["number3"];
+            this.number4 = _data["number4"];
+            this.number5 = _data["number5"];
+            this.number6 = _data["number6"];
+            this.number7 = _data["number7"];
+            this.number8 = _data["number8"];
+            this.number9 = _data["number9"];
+            this.number10 = _data["number10"];
+            this.bool1 = _data["bool1"];
+            this.bool2 = _data["bool2"];
+            this.bool3 = _data["bool3"];
+            this.bool4 = _data["bool4"];
+            this.bool5 = _data["bool5"];
+            this.name = _data["name"];
+            this.code = _data["code"];
+            this.codeData = _data["codeData"];
+            this.valueData = _data["valueData"];
+            this.category = _data["category"];
+            this.permissions = _data["permissions"];
+            this.language = _data["language"];
+            this.status = _data["status"];
+            this.hideValue = _data["hideValue"];
+            this.id = _data["id"];
+        }
+    }
+
+    static fromJS(data: any): GiftExchangeHistoryDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GiftExchangeHistoryDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["tenantId"] = this.tenantId;
+        data["creatorUserId"] = this.creatorUserId;
+        data["creationTime"] = this.creationTime ? this.creationTime.toISOString() : <any>undefined;
+        data["studentId"] = this.studentId;
+        data["teacherId"] = this.teacherId;
+        data["giftName"] = this.giftName;
+        data["sticker"] = this.sticker;
+        data["exchangeDate"] = this.exchangeDate;
+        data["value1"] = this.value1;
+        data["value2"] = this.value2;
+        data["value3"] = this.value3;
+        data["value4"] = this.value4;
+        data["value5"] = this.value5;
+        data["value6"] = this.value6;
+        data["value7"] = this.value7;
+        data["value8"] = this.value8;
+        data["value9"] = this.value9;
+        data["value10"] = this.value10;
+        data["number1"] = this.number1;
+        data["number2"] = this.number2;
+        data["number3"] = this.number3;
+        data["number4"] = this.number4;
+        data["number5"] = this.number5;
+        data["number6"] = this.number6;
+        data["number7"] = this.number7;
+        data["number8"] = this.number8;
+        data["number9"] = this.number9;
+        data["number10"] = this.number10;
+        data["bool1"] = this.bool1;
+        data["bool2"] = this.bool2;
+        data["bool3"] = this.bool3;
+        data["bool4"] = this.bool4;
+        data["bool5"] = this.bool5;
+        data["name"] = this.name;
+        data["code"] = this.code;
+        data["codeData"] = this.codeData;
+        data["valueData"] = this.valueData;
+        data["category"] = this.category;
+        data["permissions"] = this.permissions;
+        data["language"] = this.language;
+        data["status"] = this.status;
+        data["hideValue"] = this.hideValue;
+        data["id"] = this.id;
+        return data;
+    }
+}
+
+export interface IGiftExchangeHistoryDto {
+    tenantId?: number | undefined;
+    creatorUserId?: number | undefined;
+    creationTime?: Date;
+    studentId?: number | undefined;
+    teacherId?: number | undefined;
+    giftName?: string | undefined;
+    sticker?: number | undefined;
+    exchangeDate?: number | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    language?: string | undefined;
+    status?: string | undefined;
+    hideValue?: string | undefined;
+    id?: string;
+}
+
 export class HealthDeclarationGuidGetDto implements IHealthDeclarationGuidGetDto {
     tenantId?: number | undefined;
     userId?: number | undefined;
@@ -36452,6 +37366,276 @@ export interface IReviewSessionGradeInputDto {
     listContent?: StudentReviewDto[] | undefined;
     comment?: string | undefined;
     id?: string;
+}
+
+export class TeaccherSession implements ITeaccherSession {
+    classId?: string;
+    userId?: number | undefined;
+    session?: number | undefined;
+    position?: string | undefined;
+    state?: string | undefined;
+    evaluationCodes?: string | undefined;
+    comment?: string | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    search?: string | undefined;
+    isDeleted?: boolean;
+    deleterUserId?: number | undefined;
+    deletionTime?: Date | undefined;
+    tenantId?: number | undefined;
+    status?: string | undefined;
+    entityId?: string | undefined;
+    hideValue?: string | undefined;
+    language?: string | undefined;
+    lastModificationTime?: Date | undefined;
+    lastModifierUserId?: number | undefined;
+    creationTime?: Date;
+    creatorUserId?: number | undefined;
+    id?: string;
+
+    constructor(data?: ITeaccherSession) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.classId = _data["classId"];
+            this.userId = _data["userId"];
+            this.session = _data["session"];
+            this.position = _data["position"];
+            this.state = _data["state"];
+            this.evaluationCodes = _data["evaluationCodes"];
+            this.comment = _data["comment"];
+            this.value1 = _data["value1"];
+            this.value2 = _data["value2"];
+            this.value3 = _data["value3"];
+            this.value4 = _data["value4"];
+            this.value5 = _data["value5"];
+            this.value6 = _data["value6"];
+            this.value7 = _data["value7"];
+            this.value8 = _data["value8"];
+            this.value9 = _data["value9"];
+            this.value10 = _data["value10"];
+            this.number1 = _data["number1"];
+            this.number2 = _data["number2"];
+            this.number3 = _data["number3"];
+            this.number4 = _data["number4"];
+            this.number5 = _data["number5"];
+            this.number6 = _data["number6"];
+            this.number7 = _data["number7"];
+            this.number8 = _data["number8"];
+            this.number9 = _data["number9"];
+            this.number10 = _data["number10"];
+            this.bool1 = _data["bool1"];
+            this.bool2 = _data["bool2"];
+            this.bool3 = _data["bool3"];
+            this.bool4 = _data["bool4"];
+            this.bool5 = _data["bool5"];
+            this.name = _data["name"];
+            this.code = _data["code"];
+            this.codeData = _data["codeData"];
+            this.valueData = _data["valueData"];
+            this.category = _data["category"];
+            this.permissions = _data["permissions"];
+            this.search = _data["search"];
+            this.isDeleted = _data["isDeleted"];
+            this.deleterUserId = _data["deleterUserId"];
+            this.deletionTime = _data["deletionTime"] ? new Date(_data["deletionTime"].toString()) : <any>undefined;
+            this.tenantId = _data["tenantId"];
+            this.status = _data["status"];
+            this.entityId = _data["entityId"];
+            this.hideValue = _data["hideValue"];
+            this.language = _data["language"];
+            this.lastModificationTime = _data["lastModificationTime"] ? new Date(_data["lastModificationTime"].toString()) : <any>undefined;
+            this.lastModifierUserId = _data["lastModifierUserId"];
+            this.creationTime = _data["creationTime"] ? new Date(_data["creationTime"].toString()) : <any>undefined;
+            this.creatorUserId = _data["creatorUserId"];
+            this.id = _data["id"];
+        }
+    }
+
+    static fromJS(data: any): TeaccherSession {
+        data = typeof data === 'object' ? data : {};
+        let result = new TeaccherSession();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["classId"] = this.classId;
+        data["userId"] = this.userId;
+        data["session"] = this.session;
+        data["position"] = this.position;
+        data["state"] = this.state;
+        data["evaluationCodes"] = this.evaluationCodes;
+        data["comment"] = this.comment;
+        data["value1"] = this.value1;
+        data["value2"] = this.value2;
+        data["value3"] = this.value3;
+        data["value4"] = this.value4;
+        data["value5"] = this.value5;
+        data["value6"] = this.value6;
+        data["value7"] = this.value7;
+        data["value8"] = this.value8;
+        data["value9"] = this.value9;
+        data["value10"] = this.value10;
+        data["number1"] = this.number1;
+        data["number2"] = this.number2;
+        data["number3"] = this.number3;
+        data["number4"] = this.number4;
+        data["number5"] = this.number5;
+        data["number6"] = this.number6;
+        data["number7"] = this.number7;
+        data["number8"] = this.number8;
+        data["number9"] = this.number9;
+        data["number10"] = this.number10;
+        data["bool1"] = this.bool1;
+        data["bool2"] = this.bool2;
+        data["bool3"] = this.bool3;
+        data["bool4"] = this.bool4;
+        data["bool5"] = this.bool5;
+        data["name"] = this.name;
+        data["code"] = this.code;
+        data["codeData"] = this.codeData;
+        data["valueData"] = this.valueData;
+        data["category"] = this.category;
+        data["permissions"] = this.permissions;
+        data["search"] = this.search;
+        data["isDeleted"] = this.isDeleted;
+        data["deleterUserId"] = this.deleterUserId;
+        data["deletionTime"] = this.deletionTime ? this.deletionTime.toISOString() : <any>undefined;
+        data["tenantId"] = this.tenantId;
+        data["status"] = this.status;
+        data["entityId"] = this.entityId;
+        data["hideValue"] = this.hideValue;
+        data["language"] = this.language;
+        data["lastModificationTime"] = this.lastModificationTime ? this.lastModificationTime.toISOString() : <any>undefined;
+        data["lastModifierUserId"] = this.lastModifierUserId;
+        data["creationTime"] = this.creationTime ? this.creationTime.toISOString() : <any>undefined;
+        data["creatorUserId"] = this.creatorUserId;
+        data["id"] = this.id;
+        return data;
+    }
+}
+
+export interface ITeaccherSession {
+    classId?: string;
+    userId?: number | undefined;
+    session?: number | undefined;
+    position?: string | undefined;
+    state?: string | undefined;
+    evaluationCodes?: string | undefined;
+    comment?: string | undefined;
+    value1?: string | undefined;
+    value2?: string | undefined;
+    value3?: string | undefined;
+    value4?: string | undefined;
+    value5?: string | undefined;
+    value6?: string | undefined;
+    value7?: string | undefined;
+    value8?: string | undefined;
+    value9?: string | undefined;
+    value10?: string | undefined;
+    number1?: number;
+    number2?: number;
+    number3?: number;
+    number4?: number;
+    number5?: number;
+    number6?: number;
+    number7?: number;
+    number8?: number;
+    number9?: number;
+    number10?: number;
+    bool1?: boolean | undefined;
+    bool2?: boolean | undefined;
+    bool3?: boolean | undefined;
+    bool4?: boolean | undefined;
+    bool5?: boolean | undefined;
+    name?: string | undefined;
+    code?: string | undefined;
+    codeData?: string | undefined;
+    valueData?: string | undefined;
+    category?: string | undefined;
+    permissions?: string | undefined;
+    search?: string | undefined;
+    isDeleted?: boolean;
+    deleterUserId?: number | undefined;
+    deletionTime?: Date | undefined;
+    tenantId?: number | undefined;
+    status?: string | undefined;
+    entityId?: string | undefined;
+    hideValue?: string | undefined;
+    language?: string | undefined;
+    lastModificationTime?: Date | undefined;
+    lastModifierUserId?: number | undefined;
+    creationTime?: Date;
+    creatorUserId?: number | undefined;
+    id?: string;
+}
+
+export class Int64NullableInt64NullableValueTuple implements IInt64NullableInt64NullableValueTuple {
+
+    constructor(data?: IInt64NullableInt64NullableValueTuple) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+    }
+
+    static fromJS(data: any): Int64NullableInt64NullableValueTuple {
+        data = typeof data === 'object' ? data : {};
+        let result = new Int64NullableInt64NullableValueTuple();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        return data;
+    }
+}
+
+export interface IInt64NullableInt64NullableValueTuple {
 }
 
 export class SchoolScoreDto implements ISchoolScoreDto {

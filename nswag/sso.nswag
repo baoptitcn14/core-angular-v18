@@ -3,14 +3,14 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "http://localhost:5002/swagger/v1/swagger.json",
+      "url": "http://localhost:5000/swagger/v1/swagger.json",
       "output": null,
       "newLineBehavior": "Auto"
     }
   },
   "codeGenerators": {
     "openApiToTypeScriptClient": {
-      "className": "Edu_{controller}Client",
+      "className": "SSO_{controller}Client",
       "moduleName": "",
       "namespace": "",
       "typeScriptVersion": 5.4,
@@ -57,7 +57,7 @@
       "convertConstructorInterfaceData": false,
       "importRequiredTypes": true,
       "useGetBaseUrlMethod": false,
-      "baseUrlTokenName": "API_EDU_URL",
+      "baseUrlTokenName": "API_SSO_URL",
       "queryNullValue": "",
       "useAbortSignal": false,
       "inlineNamedDictionaries": false,
@@ -66,7 +66,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../src/app/shared/service-proxies/edu-service-proxies.ts",
+      "output": "../src/app/shared/service-proxies/sso-service-proxies.ts",
       "newLineBehavior": "Auto"
     },
     "openApiToCSharpClient": {

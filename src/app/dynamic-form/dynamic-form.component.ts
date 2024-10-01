@@ -182,8 +182,6 @@ export class DynamicFormComponent implements OnInit {
     }
 
     if (control.valueMatchFrom) {
-      console.log('a');
-      
       this.form.patchValue({
         [control.valueMatchFrom]: null,
       });
@@ -491,8 +489,6 @@ export class DynamicFormComponent implements OnInit {
         return 'bằng';
       case 'gt':
         return 'lớn hơn';
-      case 'gte':
-        return 'lớn hơn hoặc bằng';
       case 'gte':
         return 'lớn hơn hoặc bằng';
       case 'lt':

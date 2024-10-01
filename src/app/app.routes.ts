@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { FormComponent } from './demo/form/form.component';
 import { DialogComponent } from './demo/dialog/dialog.component';
@@ -10,7 +9,8 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./client/client.routes').then((m) => m.clientRoutes),
   },
   {
     path: 'home',
@@ -18,6 +18,13 @@ export const routes: Routes = [
     data: {
       breadcrumb: 'Home',
     },
+  },
+  {
+    path: 'webview',
+    loadChildren: () =>
+      import('./webview-client/webview-client.component').then(
+        (m) => m.WebviewClientComponent
+      ),
   },
   {
     path: 'demo',
